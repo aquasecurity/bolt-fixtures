@@ -1,0 +1,14 @@
+- bucket: abc
+  pairs:
+    - bucket: def
+      pairs:
+        - key: ghi
+          value: jkl
+- bucket: mno
+  pairs:
+    - key: pqr
+      value: stu
+    - key: vwx
+      value:
+        foo: abc
+        bar: 123
