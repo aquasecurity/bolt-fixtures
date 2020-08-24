@@ -1,4 +1,4 @@
-package bolt_fixtures
+package fixtures
 
 import (
 	"encoding/json"

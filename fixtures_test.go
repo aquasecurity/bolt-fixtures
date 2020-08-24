@@ -1,14 +1,14 @@
-package bolt_fixtures
+package fixtures_test
 
 import (
 	"io/ioutil"
 	"os"
 	"testing"
 
+	"github.com/knqyf263/bolt-fixtures"
 	"github.com/stretchr/testify/assert"
-	bolt "go.etcd.io/bbolt"
-
 	"github.com/stretchr/testify/require"
+	bolt "go.etcd.io/bbolt"
 )
 
 func TestLoader_Load(t *testing.T) {
@@ -18,7 +18,7 @@ func TestLoader_Load(t *testing.T) {
 		require.NoError(t, f.Close())
 		defer os.Remove(f.Name())
 
-		l, err := New(f.Name(), []string{"testdata/test.yaml"})
+		l, err := fixtures.New(f.Name(), []string{"testdata/test.yaml"})
 		require.NoError(t, err)
 
 		// load
@@ -53,7 +53,7 @@ func TestLoader_Load(t *testing.T) {
 		require.NoError(t, f.Close())
 		defer os.Remove(f.Name())
 
-		l, err := New(f.Name(), []string{"testdata/invalid.yaml"})
+		l, err := fixtures.New(f.Name(), []string{"testdata/invalid.yaml"})
 		require.NoError(t, err)
 
 		err = l.Load()
