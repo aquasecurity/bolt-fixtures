@@ -31,11 +31,12 @@ func TestSomething(t *testing.T) {
 	f, _ := ioutil.TempFile("", "TestSomething")
 	defer os.Remove(f.Name())
 
-	fixtures := []string{"testdata/test.yaml"})
-	l, _ := New(f.Name(), fixtures)
+	fixtureFiles := []string{"testdata/test.yaml"})
+	l, _ := fixtures.New(f.Name(), fixtureFiles)
 	defer l.Close()
 
 	_ = l.Load()
 
 	// do something
+}
 ```
