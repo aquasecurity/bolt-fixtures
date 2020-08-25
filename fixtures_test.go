@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/knqyf263/bolt-fixtures"
+	"github.com/aquasecurity/bolt-fixtures"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	bolt "go.etcd.io/bbolt"
