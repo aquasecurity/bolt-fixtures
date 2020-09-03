@@ -31,7 +31,7 @@ func TestSomething(t *testing.T) {
 	f, _ := ioutil.TempFile("", "TestSomething")
 	defer os.Remove(f.Name())
 
-	fixtureFiles := []string{"testdata/test.yaml"})
+	fixtureFiles := []string{"testdata/test.yaml"}
 	l, _ := fixtures.New(f.Name(), fixtureFiles)
 	defer l.Close()
 
