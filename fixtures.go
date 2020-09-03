@@ -97,6 +97,10 @@ func (l Loader) load(bucket *bolt.Bucket, fixture Fixture) error {
 	return nil
 }
 
+func (l Loader) DB()*bolt.DB{
+	return l.db
+}
+
 func (l Loader) Close() error {
 	return l.db.Close()
 }
